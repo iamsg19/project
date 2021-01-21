@@ -27,12 +27,12 @@ public class UserManagementController {
 
 	@Autowired
 	private UserManagementService userService;
-
+	
 	private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
 	@GetMapping("/get-encrypted-password")
 	public String getEncryptedPass(@RequestParam("password") String value) {
-
+		System.out.println("Shviaji");
 		return passwordEncoder.encode(value);
 	}
 
